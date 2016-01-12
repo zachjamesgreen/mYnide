@@ -17,7 +17,7 @@ atom-text-editor, :host {
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
+    background-color: lighten(@the-black,1%);
   }
 
   .line-number.cursor-line-no-selection {
@@ -29,11 +29,11 @@ atom-text-editor, :host {
   }
 
   .cursor {
-    border-color: @syntax-cursor-color;
+    border-color: @pink;
   }
 
   .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: lighten(@pink, 7%);
   }
 
   .search-results .marker .region {
