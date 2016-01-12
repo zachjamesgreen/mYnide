@@ -229,7 +229,7 @@ atom-text-editor, :host {
 
 // Jade syntax
 .class.jade {
-  color: @purple;
+  color: @the-blue;
 }
 
 // Prevent underlines from making their way into whitespace elements
@@ -241,6 +241,11 @@ atom-text-editor, :host {
 .source {
   &.ruby {
     color: white;
+    & .entity.other.inherited-class.ruby {
+      text-decoration: none;
+      font-style: italic;
+      color: @the-blue;
+    }
   }
 
   &.json {
