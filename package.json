@@ -1,0 +1,21 @@
+{
+  "name": "mYnide",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "private": false,
+  "description": "My take on the sublime cyanide theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachjamesgreen/mYnide"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.39.0"
+  },
+  "readme": "# mYnide theme\n\n\nAn Atom theme based on the [Cyanide](https://packagecontrol.io/packages/Theme%20-%20Cyanide) sublime theme.",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/zachjamesgreen/mYnide/issues"
+  },
+  "homepage": "https://github.com/zachjamesgreen/mYnide"
+}

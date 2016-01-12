@@ -1,0 +1,254 @@
+@import 'syntax-variables';
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .gfm {
+    .markup {
+      &.heading {
+        color: @green;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: @yellow;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: @blue;
+    }
+
+    .variable.list {
+      color: @pink;
+      font-weight: bold;
+    }
+
+    .link {
+      color: @light-gray;
+
+      .entity {
+        color: @purple;
+      }
+    }
+  }
+}
+
+.comment {
+  color: @pink;
+}
+
+.constant {
+  &.character,
+  &.language,
+  &.numeric,
+  &.other {
+    color: @the-blue;
+  }
+}
+
+.entity {
+  &.name.class {
+    text-decoration: none;
+    color: white;
+  }
+
+  &.name.type {
+    &.js {
+      color: white;
+    }
+  }
+
+  &.name.function {
+    color: @the-blue;
+    &.js {
+      color: white;
+    }
+  }
+
+  &.name.instance {
+    color: @blue;
+  }
+
+  &.name.tag {
+    color: @the-blue;
+  }
+
+  &.other.attribute-name {
+    color: white;
+    &.css {
+      color: @the-blue;
+    }
+    // &.parent-selector.css{
+    //   color: @the-blue;
+    // }
+  }
+
+  &.other.inherited-class {
+    font-style: italic;
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.invalid {
+  color: @ghost-white;
+  background-color: @pink;
+
+  &.deprecated {
+    background-color: @purple;
+  }
+}
+
+.keyword {
+  color: @the-blue !important;
+}
+
+.meta.tag {
+  color: @syntax-text-color;
+}
+
+.punctuation {
+  &.definition {
+    &.variable {
+      &.php {
+        color: @the-blue;
+      }
+    }
+  }
+}
+
+.storage {
+  color: @pink;
+
+  &.type {
+    font-style: italic;
+    color: @the-blue;
+    &.function.js {
+      font-weight: bold;
+    }
+  }
+  &.modifier {
+    &.js {
+    font-weight: bold;
+    color: @the-blue
+    }
+    &.extends.php, &.implements.php{
+      font-weight: bold;
+      color: @the-blue
+    }
+  }
+}
+
+.string {
+  color: @the-blue;
+}
+
+.support {
+  &.constant,
+  &.function {
+    color: @the-blue;
+  }
+
+  &.class,
+  &.type {
+    font-style: italic;
+    color: white;
+  }
+}
+
+.variable {
+  &.parameter {
+    font-style: italic;
+    color: @the-blue;
+  }
+
+  // for ruby
+  &.constant.ruby {
+    color: white;
+  }
+
+  // 'self' Python
+  &.language.python,
+  // 'this' Javascript
+  &.language.js {
+    color: @the-blue;
+  }
+}
+
+// Jade syntax
+.class.jade {
+  color: @purple;
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
+.source {
+  &.ruby {
+    color: white;
+  }
+
+  &.json {
+    & .structure.dictionary.value.json {
+      color: white;
+      & > * {
+        color: white;
+      }
+    }
+  }
+}
