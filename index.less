@@ -1,4 +1,8 @@
 @import 'syntax-variables';
+@import 'languages/gfm';
+@import 'languages/ruby';
+@import 'languages/json';
+@import 'languages/typescript';
 
 atom-text-editor, :host {
   background-color: @syntax-background-color;
@@ -29,7 +33,7 @@ atom-text-editor, :host {
   }
 
   .cursor {
-    border-color: @pink;
+    border-color: @dark-blue;
   }
 
   .selection .region {
@@ -44,49 +48,10 @@ atom-text-editor, :host {
   .search-results .marker.current-result .region {
     border: 1px solid @syntax-result-marker-color-selected;
   }
-
-  .gfm {
-    .markup {
-      &.heading {
-        color: @the-blue;
-        font-weight: bold;
-      }
-
-      &.underline {
-        color: @the-blue;
-        text-decoration: underline;
-      }
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-
-    .italic {
-      font-style: italic;
-    }
-
-    .raw {
-      color: @blue;
-    }
-
-    .variable.list {
-      color: @pink;
-      font-weight: bold;
-    }
-
-    .link {
-      color: @light-gray;
-
-      .entity {
-        color: @the-blue;
-      }
-    }
-  }
 }
 
 .comment {
-  color: @pink;
+  color: @dark-blue;
 }
 
 .constant {
@@ -118,7 +83,7 @@ atom-text-editor, :host {
   }
 
   &.name.instance {
-    color: @blue;
+    color: @dark-blue;
   }
 
   &.name.tag {
@@ -144,7 +109,7 @@ atom-text-editor, :host {
 
 .invalid {
   color: @ghost-white;
-  background-color: @pink;
+  background-color: @dark-blue;
 
   &.deprecated {
     background-color: @the-blue;
@@ -170,7 +135,7 @@ atom-text-editor, :host {
 }
 
 .storage {
-  color: @pink;
+  color: @the-blue;
 
   &.type {
     font-style: italic;
@@ -236,24 +201,4 @@ atom-text-editor, :host {
 .leading-whitespace,
 .trailing-whitespace {
   display: inline-block;
-}
-
-.source {
-  &.ruby {
-    color: white;
-    & .entity.other.inherited-class.ruby {
-      text-decoration: none;
-      font-style: italic;
-      color: @the-blue;
-    }
-  }
-
-  &.json {
-    & .structure.dictionary.value.json {
-      color: white;
-      & > * {
-        color: white;
-      }
-    }
-  }
 }
